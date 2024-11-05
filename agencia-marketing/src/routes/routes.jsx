@@ -15,7 +15,7 @@ export const routes = createBrowserRouter([
     },*/
     {
         path: "/",
-        element: <div>Home</div>,
+        element: <Inicio/>
     },
     {
         path: "/disenoweb",
