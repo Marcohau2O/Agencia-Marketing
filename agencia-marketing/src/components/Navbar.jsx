@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../img/Logo_transparent.png';
 import BurgerButton from './BurgerButton';
 
 function Navbar() {
@@ -16,7 +17,10 @@ function Navbar() {
     return (
         <nav className="p-2 bg-gray-800 flex items-center justify-between relative">
             <h2 className="text-white font-light">
-                <span className="font-bold">App</span>
+                <span className="font-bold"><a href="/">
+                <img src={logo} alt="" className="h-[100px] w-[100px]" />
+                </a>
+                </span>
             </h2>
 
             <div
