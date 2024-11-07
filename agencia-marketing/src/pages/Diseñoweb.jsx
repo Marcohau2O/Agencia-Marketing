@@ -147,10 +147,7 @@ function Diseñoweb() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[1, 2].map((i) => (
               <div key={i} className="card border rounded-lg overflow-hidden shadow-lg">
-                <img src="..." className="card-img-top w-full h-48 object-cover" alt="" />
-                <img src="..." className="card-img-top w-full h-48 object-cover" alt="" />
-                
-                <img src="..." className="card-img-top w-full h-48 object-cover" alt="" />
+                <img src=".." className="card-img-top w-full h-48 object-cover" alt="" />
               </div>
             ))}
           </div>
