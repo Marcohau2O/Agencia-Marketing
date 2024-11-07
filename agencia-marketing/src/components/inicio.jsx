@@ -1,9 +1,11 @@
 import React from "react";
 import Logo from "../img/Logo_transparent.png";
+import Navbar from "./Navbar";
 
 function app() {
     return (
         <>
+        <Navbar/>
         <nav class="border-blue-300 bg-blue-100 dark:bg-blue-900 dark:border-blue-800">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">

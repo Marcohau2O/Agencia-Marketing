@@ -1,292 +1,166 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import formulario from "./formulario";
 import Finalfooter from "../components/finalfooter";
-import Formulario from "./formulario";
+//import Formulario from "./formulario";
 
 function Diseñoweb() {
+  const [openItems, setOpenItems] = useState({});
+
+  const toggleAccordion = (index) => {
+    setOpenItems((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
   return (
     <>
-    <Navbar/>
-      <section>
-        <header>
-          <div className="container mx-auto bg-blue-600 px-4 h-16 flex items-center justify-center">
-            <div className="rounded-full">
-              <h1 className="text-3xl font-bold uppercase text-center">
-                Diseño Web
-              </h1>
-            </div>
-          </div>
+      <Navbar />
+      <main className="container mx-auto px-4">
+        {/* Header */}
+        <header className="bg-blue-600 h-16 flex items-center justify-center my-4 rounded-3xl">
+          <h1 className="text-3xl font-bold uppercase text-center text-white">Diseño Web</h1>
         </header>
-      </section>
 
-      <main>
+        {/* Sección "Cada sitio web es único" */}
         <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-4">
-            Hacemos webs para vender
-          </h2>
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            quae.
+          <h2 className="text-2xl font-semibold mb-4">Cada sitio web es único</h2>
+          <p className="text-gray-600 mb-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
           </p>
+
+          {/* Card Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Tarjetas de la primera fila */}
             {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="card mb-3 border rounded-lg overflow-hidden shadow-lg"
-              >
-                <img
-                  src="..."
-                  className="card-img-top w-full h-48 object-cover"
-                  alt="..."
-                />
-                <div className="card-body p-4">
-                  <h5 className="card-title text-lg font-bold">
-                    Card title {i}
-                  </h5>
-                  <p className="card-text text-gray-600">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+              <div key={i} className="card border rounded-lg overflow-hidden shadow-lg">
+                <img src="..." className="card-img-top w-full h-48 object-cover" alt={`Card ${i}`} />
+                <div className="p-4">
+                  <h5 className="text-lg font-bold">Card title {i}</h5>
+                  <p className="text-gray-600">
+                    This is a wider card with supporting text below as a natural lead-in to additional content.
                   </p>
-                  <p className="card-text text-sm text-gray-500">
+                  <p className="text-sm text-gray-500">
                     <small>Last updated 3 mins ago</small>
                   </p>
                 </div>
               </div>
             ))}
 
-            {/* Tarjeta 4 (4) */}
+            {/* Card 4 */}
             <div className="card border rounded-lg overflow-hidden shadow-lg">
-              <div className="card-body p-4">
-                <h5 className="card-title text-lg font-bold">Card title 4</h5>
-                <p className="card-text text-gray-600">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+              <img src="..." className="card-img-top w-full h-48 object-cover" alt="Card 4" />
+              <div className="p-4">
+                <h5 className="text-lg font-bold">Card title 4</h5>
+                <p className="text-gray-600">
+                  This is a wider card with supporting text below as a natural lead-in to additional content.
                 </p>
-                <p className="card-text text-sm text-gray-500">
+                <p className="text-sm text-gray-500">
                   <small>Last updated 3 mins ago</small>
                 </p>
               </div>
-              <img
-                src="..."
-                className="card-img-bottom w-full h-48 object-cover"
-                alt="..."
-              />
             </div>
 
-            {/* Tarjeta 5 (5) que ocupa 2 columnas */}
+            {/* Card 5 occupying 2 columns */}
             <div className="col-span-2 card border rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="..."
-                className="card-img-top w-full h-48 object-cover"
-                alt="..."
-              />
-              <div className="card-body p-4">
-                <h5 className="card-title text-lg font-bold">Card title 5</h5>
-                <p className="card-text text-gray-600">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+              <img src="..." className="card-img-top w-full h-48 object-cover" alt="Card 5" />
+              <div className="p-4">
+                <h5 className="text-lg font-bold">Card title 5</h5>
+                <p className="text-gray-600">
+                  This is a wider card with supporting text below as a natural lead-in to additional content.
                 </p>
-                <p className="card-text text-sm text-gray-500">
+                <p className="text-sm text-gray-500">
                   <small>Last updated 3 mins ago</small>
                 </p>
               </div>
             </div>
           </div>
-          <section>
-            <div>
-              <h2 className="text-xl font-semibold mb-4">
-                Hacemos webs para vender
-              </h2>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quae.
-              </p>
-              {/* la imagen grande*/}
-              <div className="card border rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src="..."
-                  className="card-img-top w-full h-48 object-cover"
-                  alt="..."
-                />
-                <div className="card-body p-4">
-                  <h5 className="card-title text-lg font-bold">Card title 5</h5>
-                  <p className="card-text text-gray-600">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+        </section>
+
+        {/* Sección "Hacemos webs para vender" */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Hacemos webs para vender</h2>
+          <p className="text-gray-600 mb-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+          </p>
+
+          {/* Additional Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
+            {[7].map((i) => (
+              <div key={i} className="card border rounded-lg overflow-hidden shadow-lg">
+                <img src="..." className="card-img-top w-full h-48 object-cover" alt={`Card ${i}`} />
+                <div className="p-4">
+                  <h5 className="text-lg font-bold">Card title {i}</h5>
+                  <p className="text-gray-600">
+                    This is a wider card with supporting text below as a natural lead-in to additional content.
                   </p>
-                  <p className="card-text text-sm text-gray-500">
+                  <p className="text-sm text-gray-500">
                     <small>Last updated 3 mins ago</small>
                   </p>
                 </div>
               </div>
-            </div>
-          </section>
-          <section>
-            <div>
-              <h2 className="text-xl font-semibold mb-4">
-                Somos la mejor empresa
-              </h2>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quae.
-              </p>
-              <div className="accordion" id="accordionExample">
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >
-                      Accordion Item #1
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    className="accordion-collapse collapse show"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div className="accordion-body">
-                      <strong>This is the first item's accordion body.</strong>{" "}
-                      It is shown by default, until the collapse plugin adds the
-                      appropriate classes that we use to style each element.
-                      These classes control the overall appearance, as well as
-                      the showing and hiding via CSS transitions. You can modify
-                      any of this with custom CSS or overriding our default
-                      variables. It's also worth noting that just about any HTML
-                      can go within the <code>.accordion-body</code>, though the
-                      transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      Accordion Item #2
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseTwo"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div className="accordion-body">
-                      <strong>This is the second item's accordion body.</strong>{" "}
-                      It is hidden by default, until the collapse plugin adds
-                      the appropriate classes that we use to style each element.
-                      These classes control the overall appearance, as well as
-                      the showing and hiding via CSS transitions. You can modify
-                      any of this with custom CSS or overriding our default
-                      variables. It's also worth noting that just about any HTML
-                      can go within the <code>.accordion-body</code>, though the
-                      transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      Accordion Item #3
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseThree"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div className="accordion-body">
-                      <strong>This is the third item's accordion body.</strong>{" "}
-                      It is hidden by default, until the collapse plugin adds
-                      the appropriate classes that we use to style each element.
-                      These classes control the overall appearance, as well as
-                      the showing and hiding via CSS transitions. You can modify
-                      any of this with custom CSS or overriding our default
-                      variables. It's also worth noting that just about any HTML
-                      can go within the <code>.accordion-body</code>, though the
-                      transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="card border rounded-lg overflow-hidden shadow-lg">
-                  <img
-                    src="..."
-                    className="card-img-top w-full h-48 object-cover"
-                    alt="..."
-                  />
-                  <div className="card-body p-4">
-                    <h5 className="card-title text-lg font-bold">
-                      Card title 5
-                    </h5>
-                    <p className="card-text text-gray-600">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p className="card-text text-sm text-gray-500">
-                      <small>Last updated 3 mins ago</small>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="card border rounded-lg overflow-hidden shadow-lg">
-                  <img
-                    src="..."
-                    className="card-img-top w-full h-48 object-cover"
-                    alt="..."
-                  />
-                  <div className="card-body p-4">
-                    <h5 className="card-title text-lg font-bold">
-                      Card title 6
-                    </h5>
-                    <p className="card-text text-gray-600">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p className="card-text text-sm text-gray-500">
-                      <small>Last updated 3 mins ago</small>
-                    </p>
-                  </div>
-                </div>
-
-                {/* Puedes agregar más tarjetas aquí siguiendo el mismo formato */}
-              </section>
-            </div>
-          </section>
+            ))}
+          </div>
         </section>
-        <div>
-          <Formulario/>
-        </div>
-        <footer>
-          <Finalfooter/>
-        </footer>
+
+        {/* Sección "Somos amantes del detalle" */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Somos amantes del detalle</h2>
+          <p className="text-gray-600 mb-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+          </p>
+
+          {/* Accordion */}
+          <div className="mt-6">
+            {[1, 2, 3].map((item, index) => (
+              <div key={index} className="border-b border-blue-300">
+                <button
+                  onClick={() => toggleAccordion(index)}
+                  className="w-full text-left px-4 py-2 font-semibold text-blue-600 focus:outline-none"
+                >
+                  Accordion Item #{item}
+                </button>
+                {openItems[index] && (
+                  <div className="p-4 bg-blue-50 border-t border-blue-300 text-gray-700">
+                    <p>
+                      Contenido del acordeón para el ítem {item}. Puedes añadir más texto, imágenes o cualquier contenido
+                      aquí según lo necesites.
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Form Section 
+        <section className="mb-12">
+          <Formulario />
+        </section>*/}
+
+        {/* cada sitio es unico */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4 text-center ">Cada sitio es unico</h2>
+          <p className="text-gray-600 mb-6 text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[1, 2].map((i) => (
+              <div key={i} className="card border rounded-lg overflow-hidden shadow-lg">
+                <img src="..." className="card-img-top w-full h-48 object-cover" alt="" />
+                <img src="..." className="card-img-top w-full h-48 object-cover" alt="" />
+                
+                <img src="..." className="card-img-top w-full h-48 object-cover" alt="" />
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
+
+      {/* Footer */}
+      <footer className="mt-8">
+        <Finalfooter />
+      </footer>
     </>
   );
 }
