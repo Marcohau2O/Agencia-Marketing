@@ -60,7 +60,7 @@ function Navbar() {
                             <li>
                                 <a
                                     onClick={handleClick}
-                                    href="#"
+                                    href="/redssociales"
                                     className="block px-4 py-2 hover:bg-gray-600"
                                 >
                                     Redes Sociales
@@ -83,14 +83,14 @@ function Navbar() {
 
                 <a
                     onClick={handleClick}
-                    href="#h"
+                    href="/somos"
                     className="block text-white text-2xl md:text-base md:inline md:mr-4 mb-4 md:mb-0"
                 >
                     Quienes somos
                 </a>
                 <a
                     onClick={handleClick}
-                    href="#h"
+                    href="/trabajamos"
                     className="block text-white text-2xl md:text-base md:inline md:mr-4"
                 >
                     Como Trabajamos
