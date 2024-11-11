@@ -59,12 +59,12 @@ function app() {
               </div>
               <div className="flex flex-row justify-center m-10 p-7">
                 <img
-                src="..."
+                src={Logo}
                 className="card-img-bottom w-full h-40 object-cover"
                 alt="Imagern"
               />
                 <img
-                src="..."
+                src={Logo}
                 className="card-img-bottom w-full h-40 object-cover"
                 alt="Imagern"
               />
@@ -79,13 +79,95 @@ function app() {
                   longer.</p>
             </div>
 
-            <h2 className="m-5 p-5 text-black text-3xl">This is a wider card with supporting text below as a natural
+            <h2 className="m-5 p-5 text-black text-6xl">This is a wider card with supporting text below as a natural
             lead-in to additional</h2>
               <h2 className="text-2xl justify-start m-4 pr-[70rem]">This is a wider card with supporting text below as a natural
                   longer.</h2>
                   <p className="font-light text-lg">This is a wider card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
                   longer.</p>
+
+                  <div className="grid grid-cols-3 grid-rows-8 gap-0 m-20">
+                    <div className="row-span-6 col-start-2 row-start-1">
+                          {/*IMAGEN*/}
+                      <img
+                      src={Logo}
+                      className="card-img-bottom w-full h-40 object-cover px-10"
+                      alt="Imagen"
+                      />
+                    </div>
+                    <div className="row-span-8 col-start-1 row-start-1 m-20">
+                      <h1 className="text-5xl p-8">Hola Mundo</h1>
+                      <p className="text-lg m-6">This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.</p>
+
+                        <h1 className="text-5xl p-8">Hola Mundo</h1>
+                            <p className="text-lg m-6">This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.</p>
+
+                        <h1 className="text-5xl p-8">Hola Mundo</h1>
+                            <p className="text-lg m-6">This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.</p>
+                    </div>
+                    <div className="row-span-8 m-20">
+                    <h1 className="text-5xl p-8">Hola Mundo</h1>
+                      <p className="text-lg m-6">This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.</p>
+
+                        <h1 className="text-5xl p-8">Hola Mundo</h1>
+                            <p className="text-lg m-6">This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.</p>
+
+                        <h1 className="text-5xl p-8">Hola Mundo</h1>
+                            <p className="text-lg m-6">This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.</p>
+                    </div>
+                  </div>
+
+                  <div className="rounded-lg overflow-hidden shadow-lg m-44 bg-blue-500 h-[70rem]">
+                  <div className="rounded-lg overflow-hidden shadow-lg m-4 p-2 bg-gray-800 h-[22rem]"></div>
+                  <div className="rounded-lg overflow-hidden shadow-lg m-4 p-4 bg-green-800 h-[22rem]"></div>
+                  <div className="rounded-lg overflow-hidden shadow-lg m-4 p-2 bg-red-800 h-[22rem]"></div>
+                </div>
+
+                  <footer className="bg-gray-800 text-white py-10">
+                    <div className="container mx-auto flex justify-between items-center">
+                      {/* Imagen a la izquierda */}
+                      <div className="flex-shrink-0">
+                        <img src={Logo} alt="Logo" className="h-20" />
+                      </div>
+
+                      {/* Grupo de imágenes a la derecha */}
+                      <div className="flex space-x-4">
+                        <img src={Logo} alt="Imagen 1" className="h-16" />
+                        <img src={Logo} alt="Imagen 2" className="h-16" />
+                        <img src={Logo} alt="Imagen 3" className="h-16" />
+                      </div>
+                    </div>
+
+                    {/* Texto debajo */}
+                    <div className="mt-4 text-center text-sm">
+                      <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+                    </div>
+                  </footer>
             </>
     )
 }
