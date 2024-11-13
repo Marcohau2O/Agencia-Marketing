@@ -34,7 +34,7 @@ function app() {
           <div className="flex flex-row justify-center m-10 p-7">
             <img
               src={Logo}
-              className="card-img-bottom w-60 h-40 object-cover"
+              className="card-img-bottom w-60 h-40 object-cover mr-[40rem]"
               alt="Imagern"
             />
             <img
