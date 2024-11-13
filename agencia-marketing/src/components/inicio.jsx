@@ -9,6 +9,13 @@ function app() {
     <>
       <Navbar />
       <main className="container mx-auto px-4">
+
+        {/* Botón central */}
+        <div className="flex justify-center items-center h-24">
+          <button className="bg-blue-800 text-white text-2xl py-5 px-[40rem] rounded-full">
+            Contáctanos
+          </button>
+        </div>
         {/* Sección de navegación */}
 
         <div className="card border rounded-lg overflowd-hidden shadow-lg m-4 bg-blue-500 h-[35rem]">
@@ -27,18 +34,19 @@ function app() {
               Botton
             </button>
           </div>
-          <div className="flex flex-row justify-center m-10 p-7">
+          <div className="flex flex-row justify-between items-center m-10 p-7">
             <img
               src={Logo}
-              className="card-img-bottom w-60 h-40 object-cover"
-              alt="Imagern"
+              className="w-60 h-40 object-cover"
+              alt="Imagen Izquierda"
             />
             <img
               src={Logo}
-              className="card-img-bottom w-60 h-40 object-cover"
-              alt="Imagern"
+              className="w-60 h-40 object-cover"
+              alt="Imagen Derecha"
             />
           </div>
+
         </div>
         {/* Texto en la parte superior */}
         <div className="my-10 text-center">
@@ -48,13 +56,6 @@ function app() {
           <p className="font-light text-lg">
             This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
           </p>
-        </div>
-
-        {/* Botón central */}
-        <div className="flex justify-center items-center h-24">
-          <button className="bg-blue-800 text-white text-2xl py-5 px-[40rem] rounded-full">
-            Contáctanos
-          </button>
         </div>
 
         {/* Contenedor de la imagen central con los mensajes a los lados */}
