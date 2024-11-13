@@ -17,11 +17,6 @@ function app() {
           </button>
         </div>
         {/* Sección de navegación */}
-      <div className="flex justify-center items-center h-24">
-                <button className="bg-blue-800 text-white text-2xl py-5 px-[40rem] rounded-full">
-                    Contactanos
-                </button>
-            </div>
 
         <div className="card border rounded-lg overflowd-hidden shadow-lg m-4 bg-blue-500 h-[35rem]">
           <div className="card-body p-10">
@@ -44,8 +39,7 @@ function app() {
               src={Logo}
               className="w-60 h-40 object-cover"
               alt="Imagen Izquierda"
-              className="card-img-bottom w-60 h-40 object-cover mr-[40rem]"
-              alt="Imagern"
+
             />
             <img
               src={Logo}
