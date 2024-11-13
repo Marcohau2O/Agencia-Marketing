@@ -132,8 +132,8 @@ function App() {
                 </p>
               </div>
               <div className="flex justify-start ml-16 p-10">
-              <button className="bg-red-500 text-xl text-white py-4 px-[22rem] rounded-full">
-                Botton
+              <button className="bg-blue-900 text-xl text-white py-4 px-[22rem] rounded-full">
+                Contactanos
               </button>
               </div>
               <div className="flex flex-row justify-center m-10 p-7">
