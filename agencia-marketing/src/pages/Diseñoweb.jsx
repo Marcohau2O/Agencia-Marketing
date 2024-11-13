@@ -16,7 +16,7 @@ function Diseñoweb() {
   return (
     <>
       <Navbar />
-      <main className="container mx-auto px-4">
+      <main className="container mx-auto px-4 flex-grow">
         {/* Header */}
         <header className="bg-blue-600 h-16 flex items-center justify-center my-4 rounded-3xl">
           <h1 className="text-3xl font-bold uppercase text-center text-white">Diseño Web</h1>

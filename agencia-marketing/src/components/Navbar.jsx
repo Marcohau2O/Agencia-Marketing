@@ -1,112 +1,115 @@
 import React, { useState } from 'react';
-import logo from '../img/Logo_transparent.png';
-import BurgerButton from './BurgerButton';
+import Logo from "../img/Logo_transparent.png";
 
 function Navbar() {
-    const [clicked, setClicked] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+    const [isSubmenu2Open, setIsSubmenu2Open] = useState(false);
 
-    const handleClick = () => {
-        setClicked(!clicked);
-    };
-
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
+    // Toggle menu visibility
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
     };
 
     return (
-        <nav className="p-2 bg-gray-800 flex items-center justify-between relative">
-            <h2 className="text-white font-light">
-                <span className="font-bold"><a href="/">
-                <img src={logo} alt="" className="h-[100px] w-[100px]" />
+        <nav className="border-blue-300 bg-blue-100 dark:bg-blue-900 dark:border-blue-800">
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src= {Logo} className="h-16" alt="DigitalGrow Logo" />
+                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                        DigitalGrow
+                    </span>
                 </a>
-                </span>
-            </h2>
-
-            <div
-                className={`absolute top-[-700px] left-[-2000px] right-0 transition-all duration-500 ease-in-out text-center 
-                ${clicked ? 'top-1/3 left-0 right-0 w-full block' : ''} md:static md:flex md:items-center md:w-auto`}
-            >
-
-                {/* Catálogo Dropdown */}
-                <div className="relative inline-block">
-                    <button
-                        onClick={toggleDropdown}
-                        className="flex items-center text-white text-2xl md:text-base md:mr-4 mb-4 md:mb-0"
+                <button
+                    onClick={toggleMenu}
+                    type="button"
+                    className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-hamburger"
+                    aria-expanded={isMenuOpen ? "true" : "false"}
+                >
+                    <span className="sr-only">Open main menu</span>
+                    <svg
+                        className="w-5 h-5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 17 14"
                     >
-                        Que Hacemos
-                        <svg
-                            className={`ml-1 w-4 h-4 transition-transform duration-300 ${dropdownOpen ? 'transform rotate-180' : ''
-                                }`}
-                            fill="none"
+                        <path
                             stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    {dropdownOpen && (
-                        <ul className="absolute bg-gray-700 text-white w-48 mt-2 rounded shadow-lg">
-                            <li>
-                                <a
-                                    onClick={handleClick}
-                                    href="/disenoweb"
-                                    className="block px-4 py-2 hover:bg-gray-600"
-                                >
-                                    Diseño Web
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    onClick={handleClick}
-                                    href="/redssociales"
-                                    className="block px-4 py-2 hover:bg-gray-600"
-                                >
-                                    Redes Sociales
-                                </a>
-                            </li>
-                            <li>
-                                <hr className="border-gray-600" />
-                                <a
-                                    onClick={handleClick}
-                                    href="#"
-                                    className="block px-4 py-2 hover:bg-gray-600"
-                                >
-                                    Marketing
-                                </a>
-                            </li>
-
-                        </ul>
-                    )}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M1 1h15M1 7h15M1 13h15"
+                        />
+                    </svg>
+                </button>
+                <div
+                    className={`w-full ${isMenuOpen ? "block" : "hidden"}`}
+                    id="navbar-hamburger"
+                >
+                    <ul className="flex flex-col font-medium mt-4 rounded-lg bg-transparent dark:bg-transparent shadow-lg items-center">
+                        <li className="relative w-full text-center">
+                            <a
+                                href="#"
+                                className="block py-2 px-3 text-white hover:bg-blue-700 rounded dark:hover:text-white"
+                                onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
+                            >
+                                Que Hacemos
+                            </a>
+                            {isSubmenuOpen && (
+                                <ul className="flex flex-col items-center text-white hover:bg-blue-700 rounded dark:hover:text-white">
+                                    <li className="text-center w-full">
+                                        <a
+                                            href="#"
+                                            className="block py-2 px-3 md:dark:hover:text-black dark:hover:bg-white dark:hover:text-black"
+                                            onClick={() => setIsSubmenu2Open(!isSubmenu2Open)}
+                                        >
+                                            Marketing
+                                        </a>
+                                        {isSubmenu2Open && (
+                                            <ul className="flex flex-col items-center w-full">
+                                                <li>
+                                                    <a
+                                                        href="/disenoweb"
+                                                        className="block py-2 px-3 md:dark:hover:text-black dark:hover:bg-white dark:hover:text-black"
+                                                    >
+                                                        Diseño Web
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="/redssociales"
+                                                        className="block py-2 px-3 md:dark:hover:text-black dark:hover:bg-white dark:hover:text-black"
+                                                    >
+                                                        Redes Sociales
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        )}
+                                    </li>
+                                </ul>
+                            )}
+                        </li>
+                        <li className="w-full text-center">
+                            <a
+                                href="/somos"
+                                className="block py-2 px-3 text-white hover:bg-blue-700 rounded dark:hover:text-white"
+                            >
+                                Quiénes Somos
+                            </a>
+                        </li>
+                        <li className="w-full text-center">
+                            <a
+                                href="/trabajamos"
+                                className="block py-2 px-3 text-white hover:bg-blue-700 rounded dark:hover:text-white"
+                            >
+                                Como Trabajamos
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-
-                <a
-                    onClick={handleClick}
-                    href="/somos"
-                    className="block text-white text-2xl md:text-base md:inline md:mr-4 mb-4 md:mb-0"
-                >
-                    Quienes somos
-                </a>
-                <a
-                    onClick={handleClick}
-                    href="/trabajamos"
-                    className="block text-white text-2xl md:text-base md:inline md:mr-4"
-                >
-                    Como Trabajamos
-                </a>
-
             </div>
-
-            <div className="md:hidden">
-                <BurgerButton clicked={clicked} handleClick={handleClick} />
-            </div>
-
-            <div
-                className={`bg-gray-900 absolute top-[-1000px] left-[-1000px] w-full h-full transition-all duration-600 ease-in-out 
-                ${clicked ? 'top-0 left-0 rounded-br-[50%]' : ''}`}
-                style={{ zIndex: -1 }}
-            ></div>
         </nav>
     );
 }

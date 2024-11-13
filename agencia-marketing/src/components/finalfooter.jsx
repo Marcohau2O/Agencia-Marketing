@@ -10,7 +10,7 @@ function Finalfooter() {
             <div className="container mx-auto flex justify-between items-center">
                 {/* Imagen a la izquierda */}
                 <div className="flex-shrink-0">
-                    <img src={logo} alt="Logo" className="h-16 " />
+                    <img src={logo} alt="Logo" className="h-16" />
                     <span className="text-md font-bold">DigitalGrow</span>
                 </div>
 
