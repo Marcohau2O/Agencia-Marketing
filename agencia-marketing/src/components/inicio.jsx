@@ -9,7 +9,11 @@ function app() {
     <>
       <Navbar />
       <main className="container mx-auto px-4">
-        {/* Sección de navegación */}
+      <div className="flex justify-center items-center h-24">
+                <button className="bg-blue-800 text-white text-2xl py-5 px-[40rem] rounded-full">
+                    Contactanos
+                </button>
+            </div>
 
         <div className="card border rounded-lg overflowd-hidden shadow-lg m-4 bg-blue-500 h-[35rem]">
           <div className="card-body p-10">
@@ -23,8 +27,8 @@ function app() {
             </p>
           </div>
           <div className="flex justify-start ml-16 p-10">
-            <button className="bg-red-500 text-xl text-white py-4 px-[22rem] rounded-full">
-              Botton
+            <button className="bg-blue-900 text-xl text-white py-4 px-[22rem] rounded-full">
+              Contactanos
             </button>
           </div>
           <div className="flex flex-row justify-center m-10 p-7">
@@ -51,19 +55,19 @@ function app() {
         </div>
 
         {/* Botón central */}
-        <div className="flex justify-center items-center h-24">
+        {/* <div className="flex justify-center items-center h-24">
           <button className="bg-blue-800 text-white text-2xl py-5 px-[40rem] rounded-full">
             Contáctanos
           </button>
-        </div>
+        </div> */}
 
         {/* Contenedor de la imagen central con los mensajes a los lados */}
         <div className="flex items-center justify-center my-20 space-x-8">
           {/* Mensajes a la izquierda */}
-          <div className="flex flex-col items-end space-y-8">
+          <div className="flex flex-col items-end space-y-20">
             {[...Array(3)].map((_, i) => (
               <div key={i} className="text-right">
-                <h1 className="text-3xl font-bold">Hola Mundo</h1>
+                <h1 className="text-5xl font-bold">Hola Mundo</h1>
                 <p className="text-lg max-w-xs">
                   This is a wider card with supporting text below as a natural lead-in to additional content.
                   This content is a little bit longer.
@@ -73,15 +77,15 @@ function app() {
           </div>
 
           {/* Imagen central */}
-          <div className="w-64 h-64 flex-shrink-0">
+          <div className="w-[30rem] h-[35rem] flex-shrink-0">
             <img src={Group} className="object-cover w-full h-full rounded-lg" alt="Imagen" />
           </div>
 
           {/* Mensajes a la derecha */}
-          <div className="flex flex-col items-start space-y-8">
+          <div className="flex flex-col items-start space-y-20">
             {[...Array(3)].map((_, i) => (
               <div key={i}>
-                <h1 className="text-3xl font-bold">Hola Mundo</h1>
+                <h1 className="text-5xl font-bold">Hola Mundo</h1>
                 <p className="text-lg max-w-xs">
                   This is a wider card with supporting text below as a natural lead-in to additional content.
                   This content is a little bit longer.
