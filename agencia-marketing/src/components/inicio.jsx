@@ -11,30 +11,32 @@ function app() {
       <main className="container mx-auto px-4">
       <div className="flex justify-center items-center h-24">
                 <button className="bg-blue-800 text-white text-2xl py-5 px-[40rem] rounded-full">
-                    Contactanos
+                  <a href="/Formulario">
+                  Contactanos
+                  </a>
                 </button>
             </div>
 
         <div className="card border rounded-lg overflowd-hidden shadow-lg m-4 bg-blue-500 h-[35rem]">
           <div className="card-body p-10">
-            <h5 className="card-title text-3xl font-bold">Card title 4</h5>
-            <p className="card-text text-gray-600 text-xl">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
+            <h5 className="card-title text-3xl font-bold">El cambio es inevitable, el crecimiento es opcional.</h5>
+            <p className="card-text text-black text-xl m-1">
+            Conoce por qué somos más que una agencia de marketing digital.
             </p>
             <p className="card-text text-sm text-gray-500">
             </p>
           </div>
           <div className="flex justify-start ml-16 p-10">
             <button className="bg-blue-900 text-xl text-white py-4 px-[22rem] rounded-full">
-              Contactanos
+              <a href="/Formulario">
+              Tomate un Cafe con Nosotros
+              </a>
             </button>
           </div>
           <div className="flex flex-row justify-center m-10 p-7">
             <img
               src={Logo}
-              className="card-img-bottom w-60 h-40 object-cover mr-[40rem]"
+              className="card-img-bottom w-60 h-40 object-cover mr-[30rem]"
               alt="Imagern"
             />
             <img
@@ -47,10 +49,11 @@ function app() {
         {/* Texto en la parte superior */}
         <div className="my-10 text-center">
           <h1 className="m-5 p-5 text-black text-4xl">
-            This is a wider card with supporting text below as a natural lead-in to additional
+          ¿Qué hace diferente a nuestra agencia de marketing digital en Cancún?
           </h1>
           <p className="font-light text-lg">
-            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+          El cambio es inevitable, el crecimiento opcional. Todos le tenemos miedo a lo desconocido, realmente ser diferente no está mal. Si haces lo mismo de siempre tendrás los resultados de siempre, 
+          cambia tu estrategia con nosotros y haz crecer tus ventas con una estrategia integral. Deja que los especialistas de nuestra agencia de marketing digital te sorprendan.
           </p>
         </div>
 
@@ -67,10 +70,9 @@ function app() {
           <div className="flex flex-col items-end space-y-20">
             {[...Array(3)].map((_, i) => (
               <div key={i} className="text-right">
-                <h1 className="text-5xl font-bold">Hola Mundo</h1>
+                <h1 className="text-5xl font-bold">SEO</h1>
                 <p className="text-lg max-w-xs">
-                  This is a wider card with supporting text below as a natural lead-in to additional content.
-                  This content is a little bit longer.
+                Creación de campañas SEO basada en on page, off page y estrategia de contenidos. Canal ideal para generar transacciones en tu estrategia en tu estrategia de marketing en Cancún.
                 </p>
               </div>
             ))}
@@ -85,10 +87,10 @@ function app() {
           <div className="flex flex-col items-start space-y-20">
             {[...Array(3)].map((_, i) => (
               <div key={i}>
-                <h1 className="text-5xl font-bold">Hola Mundo</h1>
+                <h1 className="text-5xl font-bold">
+                Diseño web </h1>
                 <p className="text-lg max-w-xs">
-                  This is a wider card with supporting text below as a natural lead-in to additional content.
-                  This content is a little bit longer.
+                Páginas web en Cancún. Somos expertos en creación de páginas web para ventas, entendemos al usuario y a base de experimentos tomamos las desiciones adecuadas para que tu sitio web convierta más.
                 </p>
               </div>
             ))}
@@ -96,10 +98,12 @@ function app() {
         </div>
 
         {/* Sección inferior de tarjetas de colores */}
+        <h1 className="text-5xl font-semibold m-10 flex justify-center items-start">Casos de Usos</h1>
+        <p className="text-lg">uestro trabajo como agencia digital en Cancún está meticulosamente seleccionado para cada negocio. Desafío en cuestión. Creamos estrategias perspicaces, con un diseño excepcional para cada uno de nuestros socios.</p>
         <div className="rounded-lg overflow-hidden shadow-lg m-44 bg-blue-500 h-[70rem]">
-          <div className="rounded-lg overflow-hidden shadow-lg m-4 p-2 bg-gray-800 h-[22rem]"></div>
-          <div className="rounded-lg overflow-hidden shadow-lg m-4 p-4 bg-green-800 h-[22rem]"></div>
-          <div className="rounded-lg overflow-hidden shadow-lg m-4 p-2 bg-red-800 h-[22rem]"></div>
+          <div className="rounded-lg overflow-hidden shadow-lg m-4 p-2 bg-white h-[22rem]"> <h1 className="flex justify-center items-center p-[10rem] text-5xl text-black font-semibold">Grupo Avanti</h1></div>
+          <div className="rounded-lg overflow-hidden shadow-lg m-4 p-4 bg-white h-[22rem]"> <h1 className="flex justify-center items-center p-[10rem] text-5xl text-black font-semibold">Universidad Cancun UT</h1></div>
+          <div className="rounded-lg overflow-hidden shadow-lg m-4 p-2 bg-white h-[22rem]"> <h1 className="flex justify-center items-center p-[10rem] text-5xl text-black font-semibold">Grafo Studio</h1></div>
         </div>
       </main>
 

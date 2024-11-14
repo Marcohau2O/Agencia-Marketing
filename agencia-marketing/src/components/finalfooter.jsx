@@ -6,7 +6,7 @@ import logo from '../img/Logo_transparent.png'
 
 function Finalfooter() {
     return (
-        <div className="bg-gray-800 text-white py-6">
+        <div className="bg-blue-900 text-white py-6">
             <div className="container mx-auto flex justify-between items-center">
                 {/* Imagen a la izquierda */}
                 <div className="flex-shrink-0">

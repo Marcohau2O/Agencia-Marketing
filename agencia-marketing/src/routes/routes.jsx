@@ -4,6 +4,7 @@ import Inicio from "../components/inicio";
 import Redesociales from "../pages/Redesociales";
 import ComoTrabajamos from "../pages/ComoTrabajamos";
 import Quienesomos from "../pages/Quienesomos";
+import Formulario from "../pages/formulario";
 
 
 export const routes = createBrowserRouter([
@@ -35,5 +36,9 @@ export const routes = createBrowserRouter([
     {
         path: "/somos",
         element: <Quienesomos />
+    },
+    {
+        path: "/Formulario",
+        element: <Formulario/>
     }
 ]);
