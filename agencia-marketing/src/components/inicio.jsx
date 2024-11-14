@@ -33,7 +33,7 @@ function app() {
               </a>
             </button>
           </div>
-          <div className="flex flex-row justify-center m-10 p-7">
+          <div className="flex flex-row justify-between items-center m-10 p-7">
             <img
               src={Logo}
               className="card-img-bottom w-60 h-40 object-cover mr-[30rem]"
@@ -41,10 +41,11 @@ function app() {
             />
             <img
               src={Logo}
-              className="card-img-bottom w-60 h-40 object-cover"
-              alt="Imagern"
+              className="w-60 h-40 object-cover"
+              alt="Imagen Derecha"
             />
           </div>
+
         </div>
         {/* Texto en la parte superior */}
         <div className="my-10 text-center">
