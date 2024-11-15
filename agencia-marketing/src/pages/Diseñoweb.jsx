@@ -5,6 +5,15 @@ import IReact from "../img/React.png"
 import IJava from "../img/Java.png"
 import Ilaravel from "../img/Laravel.png"
 import INet from "../img/net.png"
+import hand from "../img/handshake.png"
+import pait from "../img/paintbrush.png"
+import arrow from "../img/right-arrow.png"
+import user from "../img/user.png"
+import img1 from "../img/1.png"
+import img2 from "../img/2.png"
+import img3 from "../img/3.png"
+import img4 from "../img/4.png"
+import img5 from "../img/5.png"
 //import Formulario from "./formulario";
 
 function Diseñoweb() {
@@ -35,25 +44,25 @@ function Diseñoweb() {
 
           {/* Card Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="card border rounded-lg overflow-hidden shadow-lg">
-                <img src="..." className="card-img-top w-full h-48 object-cover" alt={`Card ${i}`} />
-                <div className="p-4">
-                  <h5 className="text-lg font-bold">Card title {i}</h5>
+            {[{img: img1}, {img: img2}, {img: img4}].map((item, index) => (
+              <div key={index} className="card border rounded-lg overflow-hidden shadow-lg">
+                <img src={item.img} className="card-img-top h-[18rem] object-cover mx-auto" alt={`Card ${index}`} />
+                {/* <div className="p-4">
+                  <h5 className="text-lg font-bold">Card title {index}</h5>
                   <p className="text-gray-600">
                     This is a wider card with supporting text below as a natural lead-in to additional content.
                   </p>
                   <p className="text-sm text-gray-500">
                     <small>Last updated 3 mins ago</small>
                   </p>
-                </div>
+                </div> */}
               </div>
             ))}
 
             {/* Card 4 */}
             <div className="card border rounded-lg overflow-hidden shadow-lg">
-              <img src="..." className="card-img-top w-full h-48 object-cover" alt="Card 4" />
-              <div className="p-4">
+              <img src={img3} className="card-img-top h-[36rem] object-cover mx-auto" alt="Card 4" />
+              {/* <div className="p-4">
                 <h5 className="text-lg font-bold">Card title 4</h5>
                 <p className="text-gray-600">
                   This is a wider card with supporting text below as a natural lead-in to additional content.
@@ -61,13 +70,13 @@ function Diseñoweb() {
                 <p className="text-sm text-gray-500">
                   <small>Last updated 3 mins ago</small>
                 </p>
-              </div>
+              </div> */}
             </div>
 
             {/* Card 5 occupying 2 columns */}
             <div className="col-span-2 card border rounded-lg overflow-hidden shadow-lg">
-              <img src="..." className="card-img-top w-full h-48 object-cover" alt="Card 5" />
-              <div className="p-4">
+              <img src={img5} className="card-img-top h-[35rem] object-cover mx-auto" alt="Card 5" />
+              {/* <div className="p-4">
                 <h5 className="text-lg font-bold">Card title 5</h5>
                 <p className="text-gray-600">
                   This is a wider card with supporting text below as a natural lead-in to additional content.
@@ -75,7 +84,7 @@ function Diseñoweb() {
                 <p className="text-sm text-gray-500">
                   <small>Last updated 3 mins ago</small>
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -152,15 +161,19 @@ function Diseñoweb() {
 
         {/* cada sitio es unico */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-center ">Cada sitio es unico</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-center ">Compromiso con la Excelencia en Diseño Web</h2>
           <p className="text-gray-600 mb-6 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+          Nuestra empresa se dedica a transformar las ideas de nuestros clientes en sitios web que no solo son visualmente atractivos, sino también funcionales y efectivos. Nos enfocamos en cuatro pilares clave:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[1, 2].map((i) => (
-              <div key={i} className="card border rounded-lg overflow-hidden shadow-lg">
-                <img src=".." className="card-img-top w-full h-48 object-cover" alt="" />
+            {[{ img: arrow, text: "Optimización para conversiones (CRO)" }, 
+            { img: user, text: "Enfoque en la experiencia del usuario (UX)" }, 
+            { img: pait, text: "Fortalecer la imagen de marca"}, 
+            { img: hand, text: "Diseño web centrado en el cliente"}].map((item, index) => (
+              <div key={index} className="card border rounded-lg overflow-hidden shadow-lg">
+                <img src={item.img} className="card-img-top w-32 h-32 m-5 object-cover mx-auto" alt="" />
+                <p className="text-xl font-semibolda text-center m-3">{item.text}</p>
               </div>
             ))}
           </div>
