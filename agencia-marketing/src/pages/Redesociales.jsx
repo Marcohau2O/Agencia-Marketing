@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Finalfooter from '../components/finalfooter';
+import Insta from "../img/insta.jpg";
+import Instagram from "../img/instagram.jpg";
 
 function Redesociales() {
   const [openItems, setOpenItems] = useState({});
@@ -27,19 +29,32 @@ function Redesociales() {
     <div>
       <h2 className="text-2xl font-semibold mb-4">Nuestro objetivo</h2>
       <p className="text-gray-600 mb-6">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+      Nuestro objetivo como agencia de marketing es maximizar 
+      la relevancia de tu marca y posicionarla estratégicamente en el mercado 
+      digital. Ya sea que busques aumentar seguidores, generar más leads o incrementar 
+      tus ventas, trabajamos en función de tus metas específicas. Nos enfocamos en 
+      construir comunidades sólidas y auténticas alrededor de tu negocio, creando 
+      contenido que inspire interacciones significativas. Nuestro equipo de 
+      Community Managers y expertos en Marketing Digital implementa estrategias 
+      integrales que combinan creatividad, análisis y tácticas de ventas para conectar 
+      a tu audiencia con tu marca de manera efectiva y sostenible.
       </p>
     </div>
 
     {/* Card Grid a la derecha */}
     <div className="grid grid-cols-1 gap-4">
       {[1].map((i) => (
-        <div key={i} className="card border rounded-lg overflow-hidden shadow-lg">
-          <img src="..." className="card-img-top w-full h-48 object-cover" alt={`Card ${i}`} />
+        <div key={i} className="card border rounded-lg overflow-hidden shadow-lg p-5">
+          <div className='flex flex-col-2'>
+          <img src={Insta} className="card-img-top h-72 object-cover mx-auto"/>
+          <img src={Instagram} className="card-img-top h-72 object-cover mx-auto" alt={`Card ${i}`} />
+          </div>
           <div className="card-body p-4">
-            <h5 className="text-lg font-bold">Card title</h5>
+            <h5 className="text-lg font-bold">Mejoramos tus redes sociales</h5>
             <p className="text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+              Asesoramos y creamos contenido atractivo, aumentando tu alcance, 
+              fortaleciendo la conexión con tu audiencia y generando interacciones 
+              que se transformen en resultados reales para tu negocio.
             </p>
           </div>
         </div>
@@ -53,24 +68,30 @@ function Redesociales() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">¿Porque es importante una agencia de redes sociales?</h2>
         <p className="text-gray-600 mb-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+        En la era digital, las redes sociales son clave para el crecimiento de cualquier negocio, 
+        pero gestionarlas efectivamente requiere más que publicaciones esporádicas. Una agencia especializada 
+        te ayuda a conectar con tu público ideal, creando contenido atractivo, campañas efectivas y analizando
+         resultados para maximizar tu impacto. Al confiar en expertos, puedes enfocarte en tu negocio mientras 
+         ellos aseguran que tu presencia digital destaque frente a la competencia, convirtiendo seguidores en 
+         clientes leales. ¡Haz que tu marca sea memorable con estrategias profesionales en redes sociales!
         </p>
 
         {/* Accordion */}
         <div className="mt-6">
-          {[1, 2, 3].map((item, index) => (
+          {[{title:"Estrategias Personalizadas", text:"Una agencia de redes sociales analiza tu negocio, tu mercado y tu audiencia para desarrollar estrategias diseñadas específicamente para tus objetivos, maximizando resultados."}, 
+          {title:"Gestión Eficiente", text:"Te libera del tiempo y esfuerzo necesarios para gestionar contenido, campañas y análisis, permitiéndote centrarte en otras áreas clave de tu negocio."}, 
+          {title:"Mayor Alcance y Conversión", text:"Con expertos que optimizan tus publicaciones y campañas, tu marca puede llegar a un público más amplio y convertir seguidores en clientes leales de manera más efectiva."}].map((item, index) => (
             <div key={index} className="border-b border-blue-300">
               <button
                 onClick={() => toggleAccordion(index)}
                 className="w-full text-left px-4 py-2 font-semibold text-blue-600 focus:outline-none"
               >
-                Accordion Item #{item}
+                - {item.title}
               </button>
               {openItems[index] && (
                 <div className="p-4 bg-blue-50 border-t border-blue-300 text-gray-700">
                   <p>
-                    Contenido del acordeón para el ítem {item}. Puedes añadir más texto, imágenes o cualquier contenido
-                    aquí según lo necesites.
+                    {item.text}
                   </p>
                 </div>
               )}
