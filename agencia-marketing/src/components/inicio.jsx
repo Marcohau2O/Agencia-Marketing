@@ -8,6 +8,12 @@ import flex from "../img/flex.png";
 import marques from "../img/marques.png";
 import twin from "../img/twin.png";
 import vancouver from "../img/vancouver.png";
+import facebook from "../img/facebook.png";
+import laptop from "../img/laptop.png";
+import star from "../img/star.png";
+import contact from "../img/contract.png";
+import refresh from "../img/refresh.png";
+import website from "../img/website.png"
 
 function app() {
   return (
@@ -69,14 +75,14 @@ function app() {
         <div className="flex items-center justify-center my-20 space-x-8">
           {/* Mensajes a la izquierda */}
           <div className="flex flex-col items-end space-y-20">
-            {[{img:"imagen", titel:"SEO", text:"Creación de campañas SEO basada en on page, off page y estrategia de contenidos."},
-              {img:"imagen", titel:"SEO", text:"Creación de campañas SEO basada en on page, off page y estrategia de contenidos."},
-              {img:"imagen", titel:"SEO", text:"Creación de campañas SEO basada en on page, off page y estrategia de contenidos."}
+            {[{img: website, titel:"Diseño UX/UI", text:"El diseño UX se centra en mejorar la interacción del usuario con un producto digital, asegurando que sea intuitiva, eficiente y satisfactoria. "},
+              {img: facebook, titel:"Redes Sociales", text:"Las redes sociales son plataformas que permiten a las marcas interactuar con su audiencia, aumentar la visibilidad y fomentar una comunidad de seguidores fieles."},
+              {img: star, titel:"Reputación Online", text:"La gestión de la reputación online implica supervisar, influir y mantener la percepción pública de una marca en internet."}
             ].map((item, index) => (
-              <div key={index} className="text-right">
-                <img src={item.img} alt="hola" className="mx-auto"/>
-                <h1 className="text-5xl font-bold">{item.titel}</h1>
-                <p className="text-lg max-w-xs">
+              <div key={index} className="text-center flex flex-col items-center">
+                <img src={item.img} alt="hola" className="m-full h-16 w-16"/>
+                <h1 className="text-2xl font-bold mx-auto">{item.titel}</h1>
+                <p className="text-lg max-w-xs mx-auto">
                   {item.text}
                 </p>
               </div>
@@ -90,14 +96,14 @@ function app() {
 
           {/* Mensajes a la derecha */}
           <div className="flex flex-col items-start space-y-20">
-            {[{img:"imagen", titel:"Diseño Web", text:"Páginas web en Cancún. Somos expertos en creación de páginas web para ventas"},
-              {img:"imagen", titel:"Diseño Web", text:"Páginas web en Cancún. Somos expertos en creación de páginas web para ventas"},
-              {img:"imagen", titel:"Diseño Web", text:"Páginas web en Cancún. Somos expertos en creación de páginas web para ventas"}
+            {[{img: laptop, titel:"Diseño Web", text:"El diseño web abarca la creación y mantenimiento de sitios web con un enfoque en la estética, la funcionalidad y la experiencia de usuario. "},
+              {img: contact, titel:"Marketing de contenidos", text:" El marketing de contenido se centra en la creación y distribución de contenido valioso para atraer a una audiencia y fomentar la acción del cliente."},
+              {img: refresh, titel:"CRO", text:"La optimización de la tasa de conversión implica ajustar y mejorar diferentes aspectos de un sitio web o aplicación para maximizar el porcentaje de visitantes que realizan una acción deseada, como una compra o registro."}
             ].map((item, index) => (
-              <div key={index}>
-                <img src={item.img} alt="hola" className="mx-auto"/>
-                <h1 className="text-5xl font-bold">{item.titel}</h1>
-                <p className="text-lg max-w-xs">
+              <div key={index} className="text-center flex flex-col items-center">
+                <img src={item.img} alt="hola" className="m-full h-16 w-16"/>
+                <h1 className="text-2xl font-bold mx-auto">{item.titel}</h1>
+                <p className="text-lg max-w-xs mx-auto">
                 {item.text}
                 </p>
               </div>
