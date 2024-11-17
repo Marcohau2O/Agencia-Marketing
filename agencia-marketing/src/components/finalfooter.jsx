@@ -6,7 +6,7 @@ import logo from '../img/Logo_transparent.png'
 
 export default function Finalfooter() {
     return (
-        <div className="border-blue-300 bg-blue-100 dark:bg-blue-900 dark:border-blue-800">
+        <div className="border-blue-600 bg-blue-700 dark:bg-blue-900 dark:border-blue-800">
             <div className="container mx-auto px-4 flex justify-between items-center">
 
                 {/* Columna izquierda con el logo */}
