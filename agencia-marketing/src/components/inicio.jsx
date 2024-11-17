@@ -50,10 +50,10 @@ function app() {
       <main className="container mx-auto px-5">
       <div className="my-10 text-center">
           <h1 className="m-5 p-5 text-black text-4xl">
-          ¿Qué hace diferente a nuestra agencia de marketing digital en Cancún?
+          ¿Qué hace diferente a Digital Grow | Agencia de marketing digital?
           </h1>
           <p className="font-light text-lg">
-          El cambio es inevitable, el crecimiento opcional. Todos le tenemos miedo a lo desconocido, realmente ser diferente no está mal. Si haces lo mismo de siempre tendrás los resultados de siempre, 
+          El cambio es inevitable; el crecimiento es una elección. Todos le tenemos miedo a lo desconocido, realmente ser diferente no está mal. Si haces lo mismo de siempre tendrás los resultados de siempre, 
           cambia tu estrategia con nosotros y haz crecer tus ventas con una estrategia integral. Deja que los especialistas de nuestra agencia de marketing digital te sorprendan.
           </p>
         </div>
