@@ -1,6 +1,7 @@
 import './App.css';
 import Inicio from "./components/inicio.jsx"
 import Navbar from './components/Navbar.jsx';
+import 'flowbite';
 
 function App() {
   return (
