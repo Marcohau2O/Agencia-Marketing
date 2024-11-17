@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Finalfooter from "../components/finalfooter";
 import bucaneros from "../img/bucaneros.png";
@@ -12,6 +12,30 @@ import twin from "../img/twin.png";
 import vancouver from "../img/vancouver.png";
 
 function ComoTrabajamos() {
+  const slides = [
+    { src: bucaneros, title: "Bucaneros", description: "Incrementamos su visibilidad y ventas con estrategias únicas." },
+    { src: ocean, title: "Ocean", description: "Optimización para destacar en el sector turístico." },
+    { src: cafe, title: "Café", description: "Creatividad que impulsa marcas locales." },
+    { src: lorenzillos, title: "Lorenzillos", description: "Marketing digital para restaurantes con resultados sobresalientes." },
+    { src: cerezas, title: "Cerezas", description: "Innovamos su presencia en línea y optimizamos su alcance." },
+    { src: flex, title: "Flex", description: "Fortalecimos su marca con branding y estrategias digitales." },
+    { src: marques, title: "Marques", description: "Contenido creativo para mejorar su visibilidad en el mercado." },
+    { src: twin, title: "Twin", description: "Reforzamos su identidad digital para una experiencia única." },
+    { src: vancouver, title: "Vancouver", description: "Posicionamos su marca en el mercado con estrategias efectivas." },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    const isFirstSlide = currentIndex === 0;
+    setCurrentIndex(isFirstSlide ? slides.length - 1 : currentIndex - 1);
+  };
+
+  const goToNext = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    setCurrentIndex(isLastSlide ? 0 : currentIndex + 1);
+  };
+
   return (
     <>
       <Navbar />
@@ -19,179 +43,52 @@ function ComoTrabajamos() {
         {/* Header */}
         <header className="bg-blue-600 h-16 flex items-center justify-center my-4 rounded-3xl">
           <h1 className="text-3xl font-bold uppercase text-center text-white">
-            Contáctanos
+            Conócenos
           </h1>
         </header>
 
-        {/* Sección "Cada sitio web es único" */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Conoce nuestro trabajo.</h2>
-          <p className="text-gray-600 mb-6">
-            Descubre los casos de éxito que respaldan el impacto y la efectividad
-            de nuestra agencia de marketing digital.
-          </p>
-
-          {/* Card Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Card 1 */}
-            <div className="card border rounded-lg overflow-hidden shadow-lg">
-              <div className="h-32 flex items-center justify-center bg-gray-100">
-                <img
-                  src={bucaneros}
-                  className="h-full w-auto object-contain"
-                  alt="Bucaneros"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <h5 className="text-sm font-bold">Bucaneros</h5>
-                <p className="text-xs text-gray-600">
-                  Estrategias digitales que incrementaron su visibilidad y ventas.
-                </p>
-              </div>
+        {/* Carousel */}
+        <section className="mb-16">
+          <div className="relative mx-auto max-w-screen-xl overflow-hidden rounded-xl shadow-lg">
+            <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden">
+              {slides.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-transform duration-700 ${index === currentIndex ? "translate-x-0" : "translate-x-full"
+                    }`}
+                  style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
+                >
+                  <img
+                    src={slide.src}
+                    alt={slide.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4 bg-black bg-opacity-60 text-white px-6 py-3 rounded-lg">
+                    <h5 className="text-lg font-bold">{slide.title}</h5>
+                    <p className="text-sm">{slide.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            {/* Card 2 */}
-            <div className="card border rounded-lg overflow-hidden shadow-lg">
-              <div className="h-32 flex items-center justify-center bg-gray-100">
-                <img
-                  src={ocean}
-                  className="h-full w-auto object-contain"
-                  alt="Ocean"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <h5 className="text-sm font-bold">Ocean</h5>
-                <p className="text-xs text-gray-600">
-                  Optimización de presencia digital con un enfoque en el sector
-                  turístico.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="card border rounded-lg overflow-hidden shadow-lg">
-              <div className="h-32 flex items-center justify-center bg-gray-100">
-                <img
-                  src={cafe}
-                  className="h-full w-auto object-contain"
-                  alt="Café"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <h5 className="text-sm font-bold">Café</h5>
-                <p className="text-xs text-gray-600">
-                  Creatividad digital para mejorar la marca de este negocio local.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="card border rounded-lg overflow-hidden shadow-lg">
-              <div className="h-32 flex items-center justify-center bg-gray-100">
-                <img
-                  src={lorenzillos}
-                  className="h-full w-auto object-contain"
-                  alt="Lorenzillos"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <h5 className="text-sm font-bold">Lorenzillos</h5>
-                <p className="text-xs text-gray-600">
-                  Estrategias de marketing digital para restaurantes que resultan en
-                  aumento de clientes.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 5 */}
-            <div className="card border rounded-lg overflow-hidden shadow-lg">
-              <div className="h-32 flex items-center justify-center bg-gray-100">
-                <img
-                  src={cerezas}
-                  className="h-full w-auto object-contain"
-                  alt="Cerezas"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <h5 className="text-sm font-bold">Cerezas</h5>
-                <p className="text-xs text-gray-600">
-                  Innovamos en su presencia en línea y optimizamos su alcance.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 6 */}
-            <div className="card border rounded-lg overflow-hidden shadow-lg">
-              <div className="h-32 flex items-center justify-center bg-gray-100">
-                <img
-                  src={flex}
-                  className="h-full w-auto object-contain"
-                  alt="Flex"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <h5 className="text-sm font-bold">Flex</h5>
-                <p className="text-xs text-gray-600">
-                  Branding y marketing digital para fortalecer su marca.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 7 */}
-            <div className="card border rounded-lg overflow-hidden shadow-lg">
-              <div className="h-32 flex items-center justify-center bg-gray-100">
-                <img
-                  src={marques}
-                  className="h-full w-auto object-contain"
-                  alt="Marques"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <h5 className="text-sm font-bold">Marques</h5>
-                <p className="text-xs text-gray-600">
-                  Creación de contenido para aumentar la visibilidad de la marca.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 8 */}
-            <div className="card border rounded-lg overflow-hidden shadow-lg">
-              <div className="h-32 flex items-center justify-center bg-gray-100">
-                <img
-                  src={twin}
-                  className="h-full w-auto object-contain"
-                  alt="Twin"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <h5 className="text-sm font-bold">Twin</h5>
-                <p className="text-xs text-gray-600">
-                  Mejoramos la identidad digital para una experiencia única.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 9 */}
-            <div className="card border rounded-lg overflow-hidden shadow-lg">
-              <div className="h-32 flex items-center justify-center bg-gray-100">
-                <img
-                  src={vancouver}
-                  className="h-full w-auto object-contain"
-                  alt="Vancouver"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <h5 className="text-sm font-bold">Vancouver</h5>
-                <p className="text-xs text-gray-600">
-                  Estrategias de marketing digital para posicionar su marca en el
-                  mercado.
-                </p>
-              </div>
-            </div>
+            {/* Navigation Buttons */}
+            <button
+              onClick={goToPrevious}
+              className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-900 bg-opacity-70 text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-opacity-90 focus:outline-none"
+            >
+              &#8592; {/* Color de las flechas */}
+            </button>
+            <button
+              onClick={goToNext}
+              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-900 bg-opacity-70 text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-opacity-90 focus:outline-none"
+            >
+              &#8594; {/* Color de las flechas */}
+            </button>
           </div>
         </section>
-      </main>
 
+
+      </main>
       {/* Footer */}
       <footer className="mt-8">
         <Finalfooter />
