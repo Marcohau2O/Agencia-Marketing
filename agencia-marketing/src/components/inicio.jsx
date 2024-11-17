@@ -3,52 +3,52 @@ import Logo from "../img/Logo_transparent.png";
 import Navbar from "./Navbar";
 import Group from "../img/Group.png";
 import Finalfooter from "../components/finalfooter";
+import cerezas from "../img/cerezas.png";
+import flex from "../img/flex.png";
+import marques from "../img/marques.png";
+import twin from "../img/twin.png";
+import vancouver from "../img/vancouver.png";
 
 function app() {
   return (
     <>
       <Navbar />
-      <main className="container mx-auto px-4">
-      <div className="flex justify-center items-center h-24">
+      {/* <div className="flex justify-center items-center h-24">
                 <button className="bg-blue-800 text-white text-2xl py-5 px-[40rem] rounded-full">
                   <a href="/Formulario">
                   Contactanos
                   </a>
                 </button>
+            </div> */}
+
+          <div className="card border overflow-hidden shadow-lg my-5 mr-[100rem] bg-blue-500 h-[35rem] w-[120rem]">
+            <div className="flex flex-col md:flex-row p-10">
+              <div className="flex-1">
+                <h5 className="card-title text-3xl font-bold m-5 p-5">El cambio es inevitable, el crecimiento es opcional.</h5>
+                <p className="card-text text-black text-xl m-6 p-6">
+                  Una agencia de marketing digital es mucho más que solo crear campañas publicitarias; se convierte en un socio estratégico que aborda el negocio de manera integral. Ofrecen consultoría estratégica para definir objetivos claros y crear planes a largo plazo, innovan con las últimas tendencias tecnológicas y creativas, y trabajan para fortalecer la identidad de la marca en todos los canales.
+                </p>
+              </div>
+              <div className="flex-1 flex justify-center items-center">
+                <img
+                  src={Logo}
+                  className="w-80 h-60 object-cover my-[2rem]"
+                  alt="Logo"
+                />
+              </div>
             </div>
-
-        <div className="card border rounded-lg overflowd-hidden shadow-lg m-4 bg-blue-500 h-[35rem]">
-          <div className="card-body p-10">
-            <h5 className="card-title text-3xl font-bold">El cambio es inevitable, el crecimiento es opcional.</h5>
-            <p className="card-text text-black text-xl m-1">
-            Conoce por qué somos más que una agencia de marketing digital.
-            </p>
-            <p className="card-text text-sm text-gray-500">
-            </p>
-          </div>
-          <div className="flex justify-start ml-16 p-10">
-            <button className="bg-blue-900 text-xl text-white py-4 px-[22rem] rounded-full">
-              <a href="/Formulario">
-              Tomate un Cafe con Nosotros
-              </a>
-            </button>
-          </div>
-          <div className="flex flex-row justify-between items-center m-10 p-7">
-            <img
-              src={Logo}
-              className="card-img-bottom w-60 h-40 object-cover mr-[30rem]"
-              alt="Imagern"
-            />
-            <img
-              src={Logo}
-              className="w-60 h-40 object-cover"
-              alt="Imagen Derecha"
-            />
+            <div className="flex justify-start ml-16">
+              <button className="bg-blue-900 text-xl text-white py-2.5 px-[4rem] rounded-full">
+                <a href="/Formulario">
+                  Tomate un Cafe con Nosotros
+                </a>
+              </button>
+            </div>
           </div>
 
-        </div>
-        {/* Texto en la parte superior */}
-        <div className="my-10 text-center">
+
+      <main className="container mx-auto px-5">
+      <div className="my-10 text-center">
           <h1 className="m-5 p-5 text-black text-4xl">
           ¿Qué hace diferente a nuestra agencia de marketing digital en Cancún?
           </h1>
@@ -69,11 +69,15 @@ function app() {
         <div className="flex items-center justify-center my-20 space-x-8">
           {/* Mensajes a la izquierda */}
           <div className="flex flex-col items-end space-y-20">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="text-right">
-                <h1 className="text-5xl font-bold">SEO</h1>
+            {[{img:"imagen", titel:"SEO", text:"Creación de campañas SEO basada en on page, off page y estrategia de contenidos."},
+              {img:"imagen", titel:"SEO", text:"Creación de campañas SEO basada en on page, off page y estrategia de contenidos."},
+              {img:"imagen", titel:"SEO", text:"Creación de campañas SEO basada en on page, off page y estrategia de contenidos."}
+            ].map((item, index) => (
+              <div key={index} className="text-right">
+                <img src={item.img} alt="hola" className="mx-auto"/>
+                <h1 className="text-5xl font-bold">{item.titel}</h1>
                 <p className="text-lg max-w-xs">
-                Creación de campañas SEO basada en on page, off page y estrategia de contenidos. Canal ideal para generar transacciones en tu estrategia en tu estrategia de marketing en Cancún.
+                  {item.text}
                 </p>
               </div>
             ))}
@@ -86,34 +90,84 @@ function app() {
 
           {/* Mensajes a la derecha */}
           <div className="flex flex-col items-start space-y-20">
-            {[...Array(3)].map((_, i) => (
-              <div key={i}>
-                <h1 className="text-5xl font-bold">
-                Diseño web </h1>
+            {[{img:"imagen", titel:"Diseño Web", text:"Páginas web en Cancún. Somos expertos en creación de páginas web para ventas"},
+              {img:"imagen", titel:"Diseño Web", text:"Páginas web en Cancún. Somos expertos en creación de páginas web para ventas"},
+              {img:"imagen", titel:"Diseño Web", text:"Páginas web en Cancún. Somos expertos en creación de páginas web para ventas"}
+            ].map((item, index) => (
+              <div key={index}>
+                <img src={item.img} alt="hola" className="mx-auto"/>
+                <h1 className="text-5xl font-bold">{item.titel}</h1>
                 <p className="text-lg max-w-xs">
-                Páginas web en Cancún. Somos expertos en creación de páginas web para ventas, entendemos al usuario y a base de experimentos tomamos las desiciones adecuadas para que tu sitio web convierta más.
+                {item.text}
                 </p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Sección inferior de tarjetas de colores */}
-        <h1 className="text-5xl font-semibold m-10 flex justify-center items-start">Casos de Usos</h1>
-        <p className="text-lg">uestro trabajo como agencia digital en Cancún está meticulosamente seleccionado para cada negocio. Desafío en cuestión. Creamos estrategias perspicaces, con un diseño excepcional para cada uno de nuestros socios.</p>
-        <div className="rounded-lg overflow-hidden shadow-lg m-44 bg-blue-500 h-[70rem]">
-          <div className="rounded-lg overflow-hidden shadow-lg m-4 p-2 bg-white h-[22rem]"> <h1 className="flex justify-center items-center p-[10rem] text-5xl text-black font-semibold">Grupo Avanti</h1></div>
-          <div className="rounded-lg overflow-hidden shadow-lg m-4 p-4 bg-white h-[22rem]"> <h1 className="flex justify-center items-center p-[10rem] text-5xl text-black font-semibold">Universidad Cancun UT</h1></div>
-          <div className="rounded-lg overflow-hidden shadow-lg m-4 p-2 bg-white h-[22rem]"> <h1 className="flex justify-center items-center p-[10rem] text-5xl text-black font-semibold">Grafo Studio</h1></div>
+      <div className="m-10 p-10">
+        <h1 className="text-5xl font-semibold text-center text-black mb-6">Casos de Uso</h1>
+      {/* Descripción */}
+      <p className="text-lg text-justify text-gray-700 mb-8">
+        En nuestra agencia digital en Cancún, trabajamos de cerca con cada cliente para crear estrategias de marketing personalizadas. Nos enfocamos en diseñar experiencias excepcionales que impulsen la visibilidad de su marca, maximicen su presencia en redes sociales y aumenten el tráfico web. Cada uno de nuestros proyectos está cuidadosamente seleccionado para garantizar los mejores resultados.
+      </p>
+      <div id="default-carousel" className="relative w-full" data-carousel="slide">
+        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+          {/* Las imágenes del carrusel */}
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={cerezas} alt="Cerezas" className="absolute block w-[64rem] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"/>
+          </div>
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={flex} alt="Flex" className="absolute block w-[34rem] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"/>
+          </div>
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={marques} alt="Marques" className="absolute block w-[28rem] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"/>
+          </div>
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={twin} alt="Twin" className="absolute block w-[28rem] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"/>
+          </div>
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={vancouver} alt="Vancouver" className="absolute block w-[55rem] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"/>
+          </div>
         </div>
+
+        {/* Controles de navegación */}
+        <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+          <button type="button" className="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+          <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+          <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+          <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+          <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+        </div>
+
+        {/* Botones para navegar entre las imágenes */}
+        <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:rinag-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg className="w-4 h-4 text-black dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span className="sr-only">Previous</span>
+          </span>
+        </button>
+
+        <button type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg className="w-4 h-4 text-black dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span className="sr-only">Next</span>
+          </span>
+        </button>
+        </div>
+      </div>
+
       </main>
 
-
-      <footer className="">
+      <footer>
         <Finalfooter />
       </footer>
     </>
-  )
+  );
 }
 
 export default app;
