@@ -1,7 +1,7 @@
 import React from 'react'
-import facebook from '../img/facebook.png'
-import instagram from '../img/instagram.png'
-import linkedin from '../img/linkedin.png'
+import facebook from '../img/facebook_blanco.png'
+import instagram from '../img/instagram_blanco.png'
+import linkedin from '../img/linkedin_blanco.png'
 import logo from '../img/Logo_transparent.png'
 
 export default function Finalfooter() {
