@@ -27,13 +27,13 @@ export default function Finalfooter() {
                 {/* Columna derecha con las redes sociales */}
                 <div className="flex space-x-6 "> {/* Aumento del espacio entre iconos */}
                     <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        <img src={facebook} alt="Facebook" className="h-12 " /> {/* Aumento del tamaño de los iconos */}
+                        <img src={facebook} alt="Facebook" className="h-16 " /> {/* Aumento del tamaño de los iconos */}
                     </a>
                     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                        <img src={instagram} alt="Instagram" className="h-12" /> {/* Aumento del tamaño de los iconos */}
+                        <img src={instagram} alt="Instagram" className="h-16" /> {/* Aumento del tamaño de los iconos */}
                     </a>
                     <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <img src={linkedin} alt="LinkedIn" className="h-12" /> {/* Aumento del tamaño de los iconos */}
+                        <img src={linkedin} alt="LinkedIn" className="h-16" /> {/* Aumento del tamaño de los iconos */}
                     </a>
                 </div>
             </div>

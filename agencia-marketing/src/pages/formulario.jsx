@@ -132,7 +132,7 @@ function Formulario() {
         <Navbar/> 
             <h2 className="text-2xl font-semibold text-gray-700 mb-4 ml-[10rem] p-2">Hola, Te Esperamos Contactanos</h2>
             <h3 className='text-sm font-semibold p-1 m-2 ml-[10rem]'>Trabajemos juntos. Escríbenos y tan pronto analicemos tu proyecto te contactaremos de vuelta.</h3>
-            <div className="p-6 bg-gray-100 max-w-5xl mx-auto rounded-lg shadow-md">
+            <div className="p-6 bg-gray-100 max-w-5xl mx-auto rounded-lg shadow-md my-10">
             <form onSubmit={handleSubmit} className="space-y-6 m-10">
                 <div className='m-8'>
                     <label htmlFor="nombre" className="block text-sm font-medium text-gray-600">
